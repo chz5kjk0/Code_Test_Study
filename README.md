@@ -6,6 +6,7 @@
 - 플랫폼: CodeUp, 백준, 프로그래머스 
 
 [📜스터디 일지 Git Wiki](https://github.com/chz5kjk0/Code_Test_Study/wiki/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EC%8A%A4%ED%84%B0%EB%94%94-%EC%9D%BC%EC%A7%80)
+
 ---
 #### 🖤commit 규칙
 `[사이트 커밋메세지 n회차 | [기초-입출력] 6016-6024` <br>
