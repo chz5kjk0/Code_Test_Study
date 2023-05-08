@@ -1,4 +1,4 @@
-﻿'''
+'''
 6097 설탕과자 뽑기
 
 @문제
@@ -34,27 +34,25 @@ d = 0 or 1
 
 '''
 
-#세로(h), 가로(w), 
-h,w = map(int,input().split())
-list = [[0 for _ in range(w)] for _ in range(h)]
 
-
+#세로(h), 가로(w),
+h, w = map(int, input().split())
+board = [[0 for _ in range(w)] for _ in range(h)]
 #막대의 개수(n),
 n = int(input())
 
 #각 막대의 길이(l),막대를 놓는 방향(d:가로는 0, 세로는 1)과 막대를 놓는 막대의 가장 왼쪽 또는 위쪽의 위치(x, y)
-l,d,x,y = map(int,input().split())
 for _ in range(n):
-  l,d,x,y = map(int,input().split())
-  if d == 0 :
+  l, d, x, y = map(int, input().split())
+  if d == 0:
     for i in range(l):
-     list[x+i][y] = 1
+      board[x - 1][y - 1 + i] = 1 #좌표는 1부터 시작하기때문에 인덱스로 쓰기 위해 1빼주기
   else:
-      for i in range(l):
-       list[x][y+i] = 1
-    
+    for i in range(l):
+      board[x - 1 + i][y - 1] = 1
 
-
-for x,y in list:
-  print(x,y)
+for i in range(h):
+  for j in range(w):
+    print(board[i][j], end=' ')
+  print()
 
