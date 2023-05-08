@@ -1,4 +1,4 @@
-﻿'''
+'''
 6096 바둑알 십자 뒤집기
 
 @문제
@@ -26,38 +26,26 @@ n개의 좌표를 입력받아 십(+)자 뒤집기한 결과를 출력하는 프
 #흰 돌의 개수(n)
 table = [[0 for _ in range(19)] for _ in range(19)]
 
-
 #바둑판 입력받기
 for i in range(19):
   oneLine = list(map(int,input().split()))
-  #print("line : ", oneLine)
   for j in range(19):
-   # print("table[i][j]:",table[i][j])
-   # print("oneLine[j]:",oneLine[j])
     table[i][j] = oneLine[j]
-
 
 n = int(input())
 #입력받은 십자 뒤집기 횟수만큼 뒤집기 실행
-for i in range(n+1):
-  print(i," 번째--- ")
+for k in range(n):
   #십자 뒤집기 좌표
   x,y = map(int, input().split())
-  print("x,y: ",x,y)
-  print(table)
-
 
   for j in range(19):
-    table[x][j] == 0 if 1 else 1
-    table[j][y] == 0 if 1 else 1
- 
-   
+    table[x-1][j] = 0 if table[x-1][j] == 1 else 1
+    table[j][y-1] = 0 if table[j][y-1] == 1 else 1
 
 #바둑판 출력
-for k in table:
-  for l in i:
-    print(l ,end=" ")
-    print()
-
+for row in table:
+  for stone in row:
+    print(stone, end=' ')
+  print()
 
 
