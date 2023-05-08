@@ -1,5 +1,5 @@
 '''
-https://school.programmers.co.kr/learn/courses/30/lessons/42576
+https://school.programmers.co.kr/learn/courses/30/lessons/42576 
 '''
 
 #마라톤에 참여한 선수들의 이름이 담긴 배열 participant
