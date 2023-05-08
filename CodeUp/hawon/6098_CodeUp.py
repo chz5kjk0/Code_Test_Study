@@ -1,4 +1,4 @@
-﻿'''
+'''
 9098 성실한 개미
 
 @문제제
@@ -30,3 +30,39 @@
 @출력
 성실한 개미가 이동한 경로를 9로 표시해 출력한다.
 '''
+
+
+#미로테이블
+table = [[0 for _ in range(10)] for _ in range(10)]
+eat = None
+
+#개미 박스 입력받기
+for i in range(10):
+  oneLine = list(map(int, input().split()))
+  for j in range(10):
+    table[i][j] = oneLine[j]
+    if oneLine[j] == 2:
+      eat = (i,j)  #먹이 위치를 저장
+
+#개미는 (2, 2)에서 출발
+#개미는 오른쪽 또는 아래쪽으로만 움직임
+x, y = 1, 1
+while True:
+  if (x, y) == eat:
+    table[x][y] = 9  #이동경로 표시
+    break
+
+  table[x][y] = 9  #이동경로 표시
+
+  if table[x][y+1] != 1:  #오른쪽으로 이동 가능한 경우
+    y += 1
+  elif table[x+1][y] != 1:  #아래쪽으로 이동 가능한 경우
+    x += 1
+  else:  #더 이상 이동할 수 없는 경우
+    break
+
+#미로 상자 출력
+for i in range(10):
+  for j in range(10):
+    print(table[i][j], end=' ')
+  print()
