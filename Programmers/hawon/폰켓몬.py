@@ -1,6 +1,6 @@
 '''
-https://school.programmers.co.kr/learn/courses/30/lessons/1845
-'''
+https://school.programmers.co.kr/learn/courses/30/lessons/1845  
+''' 
 def solution(nums):
     
     #고를 수 있는 총 포켓몬 수
